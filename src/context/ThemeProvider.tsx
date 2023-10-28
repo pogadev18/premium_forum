@@ -27,7 +27,7 @@ export function ThemeProvider({ children }: PropsWithChildren) {
         document.documentElement.classList.add('dark');
       }
     };
-
+ 
     useEffect(() => {
       handleThemeChange();
     }, [mode]);
