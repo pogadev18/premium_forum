@@ -4,11 +4,15 @@
 
 @layer utilities {
   .background-light850_dark100 {
-    @apply bg-light-850 dark:bg-dark-100;
+    @apply bg-light-850 dark:bg-slate-900;
+  }
+
+  .text-light900_dark100 {
+    @apply text-light-900 dark:text-dark-100;
   }
 
   .background-light900_dark200 {
-    @apply bg-light-900 dark:bg-dark-200;
+    @apply bg-light-900 dark:bg-slate-950;
   }
 
   .background-light900_dark300 {
