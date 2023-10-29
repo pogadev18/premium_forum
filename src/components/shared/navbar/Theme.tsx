@@ -1,23 +1,15 @@
 'use client';
+import Image from 'next/image';
 
 import { useTheme } from '@/context/ThemeProvider';
 import {
   Menubar,
-  //   MenubarCheckboxItem,
   MenubarContent,
   MenubarItem,
   MenubarMenu,
-  //   MenubarRadioGroup,
-  //   MenubarRadioItem,
-  //   MenubarSeparator,
-  //   MenubarShortcut,
-  //   MenubarSub,
-  //   MenubarSubContent,
-  //   MenubarSubTrigger,
   MenubarTrigger,
 } from '@/components/ui/menubar';
-import Image from 'next/image';
-import { themes } from '@/constants';
+import { THEMES } from '@/constants';
 
 const Theme = () => {
   const { mode, setMode } = useTheme();
@@ -45,7 +37,7 @@ const Theme = () => {
           )}
         </MenubarTrigger>
         <MenubarContent className="absolute right-[-3rem] mt-3 min-w-[120px] rounded border bg-light-900 py-2 dark:border-dark-400 dark:bg-dark-300">
-          {themes.map(({ value, label, icon }) => (
+          {THEMES.map(({ value, label, icon }) => (
             <MenubarItem
               key={value}
               onClick={() => {
