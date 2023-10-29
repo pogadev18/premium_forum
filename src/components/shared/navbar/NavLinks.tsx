@@ -7,11 +7,11 @@ import { SignedOut, useAuth } from '@clerk/nextjs';
 import { SIDEBAR_LINKS } from '@/constants';
 import { Button } from '@/components/ui/button';
 
-type NavContentProps = {
+type NavLinksProps = {
   isMobile?: boolean;
 };
 
-const NavLinks = ({ isMobile }: NavContentProps) => {
+const NavLinks = ({ isMobile }: NavLinksProps) => {
   const pathname = usePathname();
   const { isLoaded, isSignedIn } = useAuth();
 
