@@ -1,5 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Tag from './Tag';
+
+const MOCKED_TAGS = [
+  { _id: '1', name: 'javascript', totalQuestions: 13 },
+  { _id: '2', name: 'typescript', totalQuestions: 32 },
+  { _id: '3', name: 'nextjs', totalQuestions: 41 },
+  { _id: '4', name: 'sql', totalQuestions: 51 },
+];
 
 const RightSidebar = () => {
   return (
@@ -20,6 +28,7 @@ const RightSidebar = () => {
               width={20}
               height={20}
               alt="Arrow right Icon"
+              className="invert-colors"
             />
           </Link>
           <Link
@@ -34,6 +43,7 @@ const RightSidebar = () => {
               width={20}
               height={20}
               alt="Arrow right Icon"
+              className="invert-colors"
             />
           </Link>
         </div>
@@ -41,33 +51,15 @@ const RightSidebar = () => {
       <div className="mt-16">
         <h3 className="h3-bold text-dark200_light900">Popular tags</h3>
         <div className="mt-7 flex flex-col gap-4">
-          <Link
-            href="/tags/1"
-            className="flex items-center justify-between gap-2"
-          >
-            <div className="subtle-medium background-light800_dark300 text-light400_light500 inline-flex items-center rounded-md border border-none border-transparent bg-slate-900 px-4 py-2 text-xs font-semibold uppercase shadow transition-colors hover:bg-slate-900/80 focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/80 dark:focus:ring-slate-300">
-              nextjs
-            </div>
-            <p className="small-medium text-dark500_light700">13</p>
-          </Link>
-          <Link
-            href="/tags/1"
-            className="flex items-center justify-between gap-2"
-          >
-            <div className="subtle-medium background-light800_dark300 text-light400_light500 inline-flex items-center rounded-md border border-none border-transparent bg-slate-900 px-4 py-2 text-xs font-semibold uppercase shadow transition-colors hover:bg-slate-900/80 focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/80 dark:focus:ring-slate-300">
-              reactjs
-            </div>
-            <p className="small-medium text-dark500_light700">47</p>
-          </Link>
-          <Link
-            href="/tags/1"
-            className="flex items-center justify-between gap-2"
-          >
-            <div className="subtle-medium background-light800_dark300 text-light400_light500 inline-flex items-center rounded-md border border-none border-transparent bg-slate-900 px-4 py-2 text-xs font-semibold uppercase shadow transition-colors hover:bg-slate-900/80 focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/80 dark:focus:ring-slate-300">
-              typescript
-            </div>
-            <p className="small-medium text-dark500_light700">63</p>
-          </Link>
+          {MOCKED_TAGS.map((tag) => (
+            <Tag
+              showCount
+              key={tag._id}
+              id={tag._id}
+              name={tag.name}
+              totalQuestions={tag.totalQuestions}
+            />
+          ))}
         </div>
       </div>
     </>
