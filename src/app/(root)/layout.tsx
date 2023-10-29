@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 
 import Navbar from '@/components/shared/navbar/Navbar';
-import NavContent from '@/components/shared/navbar/NavContent';
+import NavLinks from '@/components/shared/navbar/NavLinks';
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (
@@ -9,7 +9,7 @@ const Layout = ({ children }: PropsWithChildren) => {
       <Navbar />
       <div className="flex">
         <section className="custom-scrollbar background-light900_dark200 light-border sticky left-0 top-0 flex h-screen w-fit flex-col justify-between overflow-y-auto border-r p-6 pt-36 shadow-light-300 dark:shadow-none max-sm:hidden lg:w-[266px]">
-          <NavContent /> {/*  Left Sidebar */}
+          <NavLinks /> {/*  Left Sidebar */}
         </section>
         <section className="flex min-h-screen flex-1 flex-col px-6 pb-6 pt-36 max-md:pb-14 sm:px-14">
           <div className="mx-auto w-full max-w-5xl">{children}</div>

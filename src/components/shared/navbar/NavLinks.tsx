@@ -11,7 +11,7 @@ type NavContentProps = {
   isMobile?: boolean;
 };
 
-const NavContent = ({ isMobile }: NavContentProps) => {
+const NavLinks = ({ isMobile }: NavContentProps) => {
   const pathname = usePathname();
   const { isLoaded, isSignedIn } = useAuth();
 
@@ -96,4 +96,4 @@ const NavContent = ({ isMobile }: NavContentProps) => {
   );
 };
 
-export default NavContent;
+export default NavLinks;

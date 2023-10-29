@@ -7,7 +7,7 @@ import {
   SheetTrigger,
   SheetClose,
 } from '@/components/ui/sheet';
-import NavContent from './NavContent';
+import NavLinks from './NavLinks';
 
 const MobileNav = () => {
   return (
@@ -40,7 +40,7 @@ const MobileNav = () => {
         </Link>
         <div className="flex h-full flex-col justify-between pb-8 pt-16">
           <SheetClose asChild>
-            <NavContent />
+            <NavLinks />
           </SheetClose>
         </div>
       </SheetContent>
