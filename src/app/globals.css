@@ -45,6 +45,10 @@ body {
     background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
   }
 
+  .primary-gradient:hover {
+    background: linear-gradient(129deg, #b0713d 0%, #ff7000 100%);
+  }
+
   .dark-gradient {
     background: linear-gradient(
       232deg,
