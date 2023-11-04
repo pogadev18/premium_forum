@@ -12,7 +12,7 @@ import { ThemeContextT, ThemeColor } from '@/types';
 const ThemeContext = createContext<ThemeContextT | undefined>(undefined);
 
 export function ThemeProvider({ children }: PropsWithChildren) {
-  const [mode, setMode] = useState<ThemeColor>(null);
+  const [mode, setMode] = useState<ThemeColor>('dark');
 
   /*
    `handleThemeChange` manages the application's theme based on user's preferences.
